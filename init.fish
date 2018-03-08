@@ -39,7 +39,7 @@ for plugin in $plugins
 			source $f
 		end
 	else
-			# read all *.fish files if no init.fish or conf.d found
+		# read all *.fish files if no init.fish or conf.d found
 		for f in (find $plugin_dir -maxdepth 1 -iname "*.fish")
 			source $f
 		end
