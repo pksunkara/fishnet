@@ -9,7 +9,7 @@ if test -z "$fishnet_plugin_dir"
 	set fishnet_plugin_dir "$config_home/fish/bundle"
 end
 
-set plugins (find $fishnet_plugin_dir -type d -maxdepth 1 -depth 1 | awk -F/ '{print $NF}')
+set plugins (find $fishnet_plugin_dir -maxdepth 1 -mindepth 1 -type d | awk -F/ '{print $NF}')
 
 for plugin in $plugins
 	if test $plugin = "fishnet"
